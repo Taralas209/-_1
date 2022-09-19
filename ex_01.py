@@ -1,8 +1,9 @@
-a = 546
-b = 'my first programm'
-c = [a, b]
-d = {'a': 546, 'b': 'my forst programm'}
-x = b + " " + str(a * 234)
+num = 546
+txt = 'my first programm'
+lst = [num, txt]
+dic = {'num': num, 'txt': txt}
+x = txt + ' ' + str(num * 234)
 
 
-print(a, b, c, d, x, sep='\n')
+print(dic)
+print(num, txt, lst, dic, x)
