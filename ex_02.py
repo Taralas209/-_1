@@ -8,5 +8,5 @@ for i in letters:
         count = count + 1
     if not i == exclude:
         print(i)
-
+    
 print('Количество символов:', count)
