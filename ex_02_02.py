@@ -6,6 +6,10 @@ if '#' in calc:
     first = float(calc[:position])
     print(second % first)
 
+    # можно разбивать строку так:
+    # first, second = calc.split('#')
+    # print(int(second) % int(first))
+
 elif '!' in calc:
     position = calc.find('!')
     second = calc[position + 1:]
@@ -15,9 +19,13 @@ elif '!' in calc:
 
     for i in first:
         totalf = totalf + int(i)
+        # аналог: totalf += int(i)
     for i in second:
         totals = totals + int(i)
-    #а можно это всё в один цикл??
+        # вот такой метод тоже интересный
+        # string = '123456'
+        # numbers_sum = sum([int(num) for num in string])
+        # numbers_sum = sum(map(int, string))
 
     if totalf > totals:
         print(first)
@@ -30,6 +38,8 @@ elif '@' in calc:
     position = calc.find('@')
     second = int(calc[position + 1:])
     first = int(calc[:position])
+    print(type(first))
+    print(type(second))
 
     if first > second:
         print(first)
