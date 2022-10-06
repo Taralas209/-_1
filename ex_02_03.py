@@ -8,9 +8,7 @@ counts = dict(sorted(counts.items(), key=lambda x:x[1], reverse=True))
 
 
 
-out = open(r'new.txt', "w", encoding="utf8")
+out = open('new.txt', "w", encoding="utf8")
 
 for line in counts:
     out.write(f"{line}; {counts[line]}\n")
-
-out.close
